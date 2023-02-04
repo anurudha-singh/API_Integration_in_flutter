@@ -8,7 +8,7 @@ class Api_Services{
     final response = await http
         .get(Uri.parse('https://jsonplaceholder.typicode.com/albums/1'));
 
-    if (response.statusCode == 200) {
+    if (response.statusCode == 200) {//for checking the Network data
       // If the server did return a 200 OK response,
       // then parse the JSON.
       return Album.fromJson(jsonDecode(response.body));
